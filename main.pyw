@@ -72,10 +72,11 @@ def open_new_window(distraction: str):
     # To make windowed fullscreen (commented out):
     # new.geometry(f"{root.winfo_screenwidth()}x{root.winfo_screenheight()}+0+0")
     
+    root.update_idletasks()
+    
     # Have window be created at random location (harder to close)
     rand_width  = random.randint(0, root.winfo_screenwidth()-500)
     rand_height = random.randint(0, root.winfo_screenheight()-500)
-    print(rand_width,rand_height)
     new.geometry(f"500x500+{rand_width}+{rand_height}")
     new.title("Close it.")
     
